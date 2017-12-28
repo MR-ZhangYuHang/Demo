@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Details";
+}
+
+@model MVC5_EF6.ViewModels.SysUser
+
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+    </tr>
+
+        <tr>
+        <td>
+            @Html.DisplayFor(model => model.UserName)
+        </td>
+
+        <td>
+            @Html.DisplayFor(model => model.Email)
+        </td>
+    </tr> 
+   
+
+</table>

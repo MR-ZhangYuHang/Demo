@@ -1,0 +1,10 @@
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.DAL\bin\Debug\Ninesky.DAL.dll.config
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.DAL\bin\Debug\Ninesky.DAL.dll
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.DAL\bin\Debug\Ninesky.DAL.pdb
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.DAL\bin\Debug\EntityFramework.dll
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.DAL\bin\Debug\EntityFramework.SqlServer.dll
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.DAL\bin\Debug\EntityFramework.xml
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.DAL\bin\Debug\EntityFramework.SqlServer.xml
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.DAL\obj\Debug\Ninesky.DAL.csprojResolveAssemblyReference.cache
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.DAL\obj\Debug\Ninesky.DAL.dll
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.DAL\obj\Debug\Ninesky.DAL.pdb

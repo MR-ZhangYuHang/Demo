@@ -1,0 +1,7 @@
+D:\Documents\Visual Studio 2013\Projects\ProblemAnalysis\BLL\bin\Release\BLL.dll
+D:\Documents\Visual Studio 2013\Projects\ProblemAnalysis\BLL\bin\Release\BLL.pdb
+D:\Documents\Visual Studio 2013\Projects\ProblemAnalysis\BLL\bin\Release\DAL.dll
+D:\Documents\Visual Studio 2013\Projects\ProblemAnalysis\BLL\bin\Release\DAL.pdb
+D:\Documents\Visual Studio 2013\Projects\ProblemAnalysis\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2013\Projects\ProblemAnalysis\BLL\obj\Release\BLL.dll
+D:\Documents\Visual Studio 2013\Projects\ProblemAnalysis\BLL\obj\Release\BLL.pdb

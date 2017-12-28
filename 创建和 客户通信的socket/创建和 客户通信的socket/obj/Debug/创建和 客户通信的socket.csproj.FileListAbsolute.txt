@@ -1,0 +1,9 @@
+d:\documents\visual studio 2013\Projects\创建和 客户通信的socket\创建和 客户通信的socket\bin\Debug\创建和 客户通信的socket.exe.config
+d:\documents\visual studio 2013\Projects\创建和 客户通信的socket\创建和 客户通信的socket\bin\Debug\创建和 客户通信的socket.exe
+d:\documents\visual studio 2013\Projects\创建和 客户通信的socket\创建和 客户通信的socket\bin\Debug\创建和 客户通信的socket.pdb
+d:\documents\visual studio 2013\Projects\创建和 客户通信的socket\创建和 客户通信的socket\obj\Debug\创建和 客户通信的socket.csprojResolveAssemblyReference.cache
+d:\documents\visual studio 2013\Projects\创建和 客户通信的socket\创建和 客户通信的socket\obj\Debug\创建和_客户通信的socket.Form1.resources
+d:\documents\visual studio 2013\Projects\创建和 客户通信的socket\创建和 客户通信的socket\obj\Debug\创建和_客户通信的socket.Properties.Resources.resources
+d:\documents\visual studio 2013\Projects\创建和 客户通信的socket\创建和 客户通信的socket\obj\Debug\创建和 客户通信的socket.csproj.GenerateResource.Cache
+d:\documents\visual studio 2013\Projects\创建和 客户通信的socket\创建和 客户通信的socket\obj\Debug\创建和 客户通信的socket.exe
+d:\documents\visual studio 2013\Projects\创建和 客户通信的socket\创建和 客户通信的socket\obj\Debug\创建和 客户通信的socket.pdb

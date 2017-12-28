@@ -1,0 +1,11 @@
+D:\Documents\Visual Studio 2013\Projects\WpfApp1\WpfControlLibrary2\bin\Debug\WpfControlLibrary2.dll
+D:\Documents\Visual Studio 2013\Projects\WpfApp1\WpfControlLibrary2\bin\Debug\WpfControlLibrary2.pdb
+D:\Documents\Visual Studio 2013\Projects\WpfApp1\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.csprojResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2013\Projects\WpfApp1\WpfControlLibrary2\obj\Debug\UserControl1.baml
+D:\Documents\Visual Studio 2013\Projects\WpfApp1\WpfControlLibrary2\obj\Debug\UserControl1.g.cs
+D:\Documents\Visual Studio 2013\Projects\WpfApp1\WpfControlLibrary2\obj\Debug\WpfControlLibrary2_MarkupCompile.cache
+D:\Documents\Visual Studio 2013\Projects\WpfApp1\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.g.resources
+D:\Documents\Visual Studio 2013\Projects\WpfApp1\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.Properties.Resources.resources
+D:\Documents\Visual Studio 2013\Projects\WpfApp1\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.csproj.GenerateResource.Cache
+D:\Documents\Visual Studio 2013\Projects\WpfApp1\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.dll
+D:\Documents\Visual Studio 2013\Projects\WpfApp1\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.pdb

@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "问题分析汇总";
+}
+<div style="padding-top:100px;">
+    <span class="txt">标题:</span><span id="title"></span>
+    <br />
+    <span class="txt">问题描述:</span><br /><div id="problem"></div>
+    <br />
+    <span class="txt">解决方案:</span><br /><div id="solution"></div>
+</div>
+<script src="~/Scripts/bootstrap-paginator-master/lib/jquery-1.9.1.min.js"></script>
+<link href="~/Scripts/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" />
+
+
+<script>
+    $(function () {
+        var id = sessionStorage.getItem("CId");
+        $.ajax({
+            url: "/Home/GetLine",
+            type: "POST",
+            data: { id: id },
+            success: function (data) {
+                result = eval('(' + data + ')');
+                result_Table = result.Table;
+                $("#title").html(result_Table[0].Title);
+                var txt1 = HTMLDecode(result_Table[0].Problemdescription);
+                var txt2 = HTMLDecode(result_Table[0].Solution);
+                $("#problem").append(txt1);
+                $("#solution").append(txt2);
+
+
+            }
+        })
+    })
+    function HTMLDecode(text) {
+        var temp = document.createElement("div");
+        temp.innerHTML = text;
+        var output = temp.innerText || temp.textContent;
+        temp = null;
+        return output;
+    }
+</script>
+<style>
+    .txt {
+        font-size: 24px;
+    }
+</style>

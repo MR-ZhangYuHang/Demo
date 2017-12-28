@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MvcDemoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SysRole">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar(max)" />
+    <Property Name="RoleDesc" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="SysUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Password" Type="nvarchar(max)" />
+    <Property Name="istext" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SysUserRole">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SysUserID" Type="nvarchar(max)" />
+    <Property Name="SysRoleID" Type="nvarchar(max)" />
+    <Property Name="SysRole_ID" Type="int" />
+    <Property Name="SysUser_ID" Type="int" />
+  </EntityType>
+  <Association Name="FK_dbo_SysUserRole_dbo_SysRole_SysRole_ID">
+    <End Role="SysRole" Type="Self.SysRole" Multiplicity="0..1" />
+    <End Role="SysUserRole" Type="Self.SysUserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysRole">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SysUserRole">
+        <PropertyRef Name="SysRole_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_SysUserRole_dbo_SysUser_SysUser_ID">
+    <End Role="SysUser" Type="Self.SysUser" Multiplicity="0..1" />
+    <End Role="SysUserRole" Type="Self.SysUserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysUser">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SysUserRole">
+        <PropertyRef Name="SysUser_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="ProcedureName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="abc" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="MvcDemoModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysRole" EntityType="Self.SysRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysUser" EntityType="Self.SysUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysUserRole" EntityType="Self.SysUserRole" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_dbo_SysUserRole_dbo_SysRole_SysRole_ID" Association="Self.FK_dbo_SysUserRole_dbo_SysRole_SysRole_ID">
+      <End Role="SysRole" EntitySet="SysRole" />
+      <End Role="SysUserRole" EntitySet="SysUserRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_SysUserRole_dbo_SysUser_SysUser_ID" Association="Self.FK_dbo_SysUserRole_dbo_SysUser_SysUser_ID">
+      <End Role="SysUser" EntitySet="SysUser" />
+      <End Role="SysUserRole" EntitySet="SysUserRole" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

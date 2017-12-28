@@ -1,0 +1,82 @@
+--sql分页存储过程--
+USE [WebRLZ]
+GO
+/****** Object:  StoredProcedure [dbo].[GetAllPractice]    Script Date: 03/24/2017 15:58:04 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+ALTER PROCEDURE [dbo].[GetAllPractice] 
+	-- Add the parameters for the stored procedure here
+    @userid BIGINT ,
+    @rows INT ,
+    @pageindex INT
+    --@TotalCount INT OUTPUT
+AS 
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+    SET NOCOUNT ON;
+    BEGIN TRY
+        SET XACT_ABORT ON
+        BEGIN TRAN
+        DECLARE @sql1 NVARCHAR(1000);
+        DECLARE @sql2 NVARCHAR(2000);
+        DECLARE @sql3 NVARCHAR(2000);
+        DECLARE @rownumber INT;
+        DECLARE @totalcount BIGINT;
+        SET @rownumber = @rows * ( @pageindex - 1 );
+        SET @sql2 = ' SET ROWCOUNT @rows;'
+        SET @sql2 = @sql2 + ' select * from (select ROW_NUMBER() over(order by a.id)as rownumber,A.UserNo,A.USERNAME,B.EnterpriseName,C.CollegeName 
+					FROM [User] A JOIN Enterprise B ON A.UserSorEId = B.Id JOIN College C ON A.UserSorEId=C.Id where a.UserNo=@userid ) as a'    
+        SET @sql2 = @sql2 + ' where rownumber>@rownumber';
+        SET @sql2 = @sql2 + ' SET ROWCOUNT 0;'
+        SET @sql3 = ' select @total=count(*) from (select  A.UserNo,A.USERNAME,B.EnterpriseName,C.CollegeName 
+					FROM [User] A JOIN Enterprise B ON A.UserSorEId = B.Id JOIN College C ON A.UserSorEId=C.Id where a.UserNo=@userid ) as a';
+        EXEC sp_executesql @sql3, N'@total bigint output,@userid bigint',
+            @totalcount OUTPUT, @userid
+        EXEC sp_executesql @sql2, N'@rows int,@userid bigint,@rownumber int',
+            @rows, @userid, @rownumber  
+        SELECT  @totalcount; 
+        COMMIT
+    END TRY
+    BEGIN CATCH
+        ROLLBACK TRAN
+        SELECT  -1;
+        SELECT  0;
+    END CATCH
+END
+
+
+
+http://192.168.1.39:8082/A_CompetitionResults.html
+
+http://192.168.1.207:81/jhby_doc/
+
+
+ //-------------------------------------张宇航----------------------开始
+        /// <summary>
+        /// 用户管理，根据查询条件导出用户信息
+        /// </summary>
+        /// <param name="UserNo"></param>
+        /// <param name="UserName"></param>
+        /// <param name="danwei"></param>
+        /// <param name="GroupName"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public FileStreamResult ExportCompetitionCanking_Check(string UserNo, string UserName, string danwei, string GroupName, string idArr)
+        {
+            string filename = "用户信息" + DateTime.Now.ToString("yyyy年MM月dd日HH时mm分ss秒") + ".csv";
+            string path = "D:/myfile/"+filename;
+            bool b = bll.ExportCompetitionCanking_Check(UserNo, UserName, danwei, GroupName, idArr,path);
+
+            return File(new FileStream(path, FileMode.Open), "text/comma-separated-values", filename);
+        }
+
+
+        //-------------------------------------张宇航----------------------结束

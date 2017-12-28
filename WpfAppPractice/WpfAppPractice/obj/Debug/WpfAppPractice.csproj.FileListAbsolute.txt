@@ -1,0 +1,17 @@
+d:\documents\visual studio 2013\Projects\WpfAppPractice\WpfAppPractice\bin\Debug\WpfAppPractice.exe.config
+d:\documents\visual studio 2013\Projects\WpfAppPractice\WpfAppPractice\bin\Debug\WpfAppPractice.exe
+d:\documents\visual studio 2013\Projects\WpfAppPractice\WpfAppPractice\bin\Debug\WpfAppPractice.pdb
+d:\documents\visual studio 2013\Projects\WpfAppPractice\WpfAppPractice\obj\Debug\WpfAppPractice.csprojResolveAssemblyReference.cache
+d:\documents\visual studio 2013\Projects\WpfAppPractice\WpfAppPractice\obj\Debug\MainWindow.baml
+d:\documents\visual studio 2013\Projects\WpfAppPractice\WpfAppPractice\obj\Debug\MainWindow.g.cs
+d:\documents\visual studio 2013\Projects\WpfAppPractice\WpfAppPractice\obj\Debug\App.g.cs
+d:\documents\visual studio 2013\Projects\WpfAppPractice\WpfAppPractice\obj\Debug\WpfAppPractice_MarkupCompile.cache
+d:\documents\visual studio 2013\Projects\WpfAppPractice\WpfAppPractice\obj\Debug\WpfAppPractice.g.resources
+d:\documents\visual studio 2013\Projects\WpfAppPractice\WpfAppPractice\obj\Debug\WpfAppPractice.Properties.Resources.resources
+d:\documents\visual studio 2013\Projects\WpfAppPractice\WpfAppPractice\obj\Debug\WpfAppPractice.csproj.GenerateResource.Cache
+d:\documents\visual studio 2013\Projects\WpfAppPractice\WpfAppPractice\obj\Debug\WpfAppPractice.exe
+d:\documents\visual studio 2013\Projects\WpfAppPractice\WpfAppPractice\obj\Debug\WpfAppPractice.pdb
+d:\documents\visual studio 2013\Projects\WpfAppPractice\WpfAppPractice\obj\Debug\Window1.baml
+d:\documents\visual studio 2013\Projects\WpfAppPractice\WpfAppPractice\obj\Debug\Window1.g.cs
+D:\Documents\Visual Studio 2013\Projects\WpfAppPractice\WpfAppPractice\obj\Debug\style\color.baml
+D:\Documents\Visual Studio 2013\Projects\WpfAppPractice\WpfAppPractice\obj\Debug\App.baml

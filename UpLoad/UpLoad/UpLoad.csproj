@@ -1,0 +1,760 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5DD928FA-3954-44C2-87D7-F9948694E022}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UpLoad</RootNamespace>
+    <AssemblyName>UpLoad</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Words, Version=10.5.0.0, Culture=neutral, PublicKeyToken=fa9a48344f15a022, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop.Forms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.30506.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.30506.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.30506.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.30506.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.30506.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.4.0.30506\lib\net40\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DownLoadController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UpLoadController.cs" />
+    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\DownFile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="DownLoad\wordb.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="DownLoad\pdf.pdf" />
+    <Content Include="DownLoad\wordb.doc" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\build\pdf.js" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\build\pdf.worker.js" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\compatibility.js" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\debugger.js" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\annotation-check.svg" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\annotation-comment.svg" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\annotation-help.svg" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\annotation-insert.svg" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\annotation-key.svg" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\annotation-newparagraph.svg" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\annotation-noicon.svg" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\annotation-note.svg" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\annotation-paragraph.svg" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\findbarButton-next%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\findbarButton-next-rtl%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\findbarButton-next-rtl.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\findbarButton-next.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\findbarButton-previous%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\findbarButton-previous-rtl%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\findbarButton-previous-rtl.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\findbarButton-previous.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\grab.cur" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\grabbing.cur" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\loading-icon.gif" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\loading-small%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\loading-small.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\secondaryToolbarButton-documentProperties%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\secondaryToolbarButton-documentProperties.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\secondaryToolbarButton-firstPage%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\secondaryToolbarButton-firstPage.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\secondaryToolbarButton-handTool%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\secondaryToolbarButton-handTool.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\secondaryToolbarButton-lastPage%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\secondaryToolbarButton-lastPage.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\secondaryToolbarButton-rotateCcw%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\secondaryToolbarButton-rotateCcw.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\secondaryToolbarButton-rotateCw%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\secondaryToolbarButton-rotateCw.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\shadow.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\texture.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-bookmark%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-bookmark.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-download%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-download.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-menuArrows%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-menuArrows.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-openFile%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-openFile.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-pageDown%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-pageDown-rtl%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-pageDown-rtl.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-pageDown.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-pageUp%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-pageUp-rtl%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-pageUp-rtl.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-pageUp.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-presentationMode%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-presentationMode.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-print%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-print.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-search%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-search.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-secondaryToolbarToggle%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-secondaryToolbarToggle-rtl%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-secondaryToolbarToggle-rtl.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-secondaryToolbarToggle.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-sidebarToggle%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-sidebarToggle-rtl%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-sidebarToggle-rtl.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-sidebarToggle.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-viewAttachments%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-viewAttachments.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-viewOutline%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-viewOutline-rtl%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-viewOutline-rtl.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-viewOutline.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-viewThumbnail%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-viewThumbnail.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-zoomIn%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-zoomIn.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-zoomOut%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\toolbarButton-zoomOut.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\treeitem-collapsed%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\treeitem-collapsed-rtl%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\treeitem-collapsed-rtl.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\treeitem-collapsed.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\treeitem-expanded%402x.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\images\treeitem-expanded.png" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\l10n.js" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\viewer.css" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\viewer.html" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\viewer.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\UpLoad\Index.cshtml" />
+    <Content Include="Views\DownLoad\Index.cshtml" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\LICENSE" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\78-EUC-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\78-EUC-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\78-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\78-RKSJ-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\78-RKSJ-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\78-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\78ms-RKSJ-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\78ms-RKSJ-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\83pv-RKSJ-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\90ms-RKSJ-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\90ms-RKSJ-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\90msp-RKSJ-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\90msp-RKSJ-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\90pv-RKSJ-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\90pv-RKSJ-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Add-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Add-RKSJ-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Add-RKSJ-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Add-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-CNS1-0.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-CNS1-1.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-CNS1-2.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-CNS1-3.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-CNS1-4.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-CNS1-5.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-CNS1-6.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-CNS1-UCS2.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-GB1-0.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-GB1-1.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-GB1-2.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-GB1-3.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-GB1-4.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-GB1-5.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-GB1-UCS2.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-Japan1-0.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-Japan1-1.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-Japan1-2.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-Japan1-3.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-Japan1-4.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-Japan1-5.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-Japan1-6.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-Japan1-UCS2.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-Korea1-0.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-Korea1-1.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-Korea1-2.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Adobe-Korea1-UCS2.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\B5-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\B5-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\B5pc-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\B5pc-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\CNS-EUC-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\CNS-EUC-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\CNS1-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\CNS1-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\CNS2-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\CNS2-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\ETen-B5-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\ETen-B5-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\ETenms-B5-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\ETenms-B5-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\ETHK-B5-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\ETHK-B5-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\EUC-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\EUC-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Ext-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Ext-RKSJ-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Ext-RKSJ-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Ext-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\GB-EUC-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\GB-EUC-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\GB-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\GB-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\GBK-EUC-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\GBK-EUC-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\GBK2K-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\GBK2K-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\GBKp-EUC-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\GBKp-EUC-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\GBpc-EUC-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\GBpc-EUC-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\GBT-EUC-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\GBT-EUC-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\GBT-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\GBT-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\GBTpc-EUC-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\GBTpc-EUC-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Hankaku.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Hiragana.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\HKdla-B5-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\HKdla-B5-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\HKdlb-B5-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\HKdlb-B5-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\HKgccs-B5-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\HKgccs-B5-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\HKm314-B5-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\HKm314-B5-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\HKm471-B5-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\HKm471-B5-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\HKscs-B5-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\HKscs-B5-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Katakana.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\KSC-EUC-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\KSC-EUC-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\KSC-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\KSC-Johab-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\KSC-Johab-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\KSC-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\KSCms-UHC-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\KSCms-UHC-HW-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\KSCms-UHC-HW-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\KSCms-UHC-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\KSCpc-EUC-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\KSCpc-EUC-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\LICENSE" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\NWP-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\NWP-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\RKSJ-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\RKSJ-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\Roman.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniCNS-UCS2-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniCNS-UCS2-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniCNS-UTF16-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniCNS-UTF16-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniCNS-UTF32-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniCNS-UTF32-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniCNS-UTF8-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniCNS-UTF8-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniGB-UCS2-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniGB-UCS2-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniGB-UTF16-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniGB-UTF16-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniGB-UTF32-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniGB-UTF32-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniGB-UTF8-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniGB-UTF8-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniJIS-UCS2-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniJIS-UCS2-HW-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniJIS-UCS2-HW-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniJIS-UCS2-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniJIS-UTF16-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniJIS-UTF16-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniJIS-UTF32-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniJIS-UTF32-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniJIS-UTF8-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniJIS-UTF8-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniJIS2004-UTF16-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniJIS2004-UTF16-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniJIS2004-UTF32-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniJIS2004-UTF32-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniJIS2004-UTF8-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniJIS2004-UTF8-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniJISPro-UCS2-HW-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniJISPro-UCS2-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniJISPro-UTF8-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniJISX0213-UTF32-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniJISX0213-UTF32-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniJISX02132004-UTF32-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniJISX02132004-UTF32-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniKS-UCS2-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniKS-UCS2-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniKS-UTF16-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniKS-UTF16-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniKS-UTF32-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniKS-UTF32-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniKS-UTF8-H.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\UniKS-UTF8-V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\V.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\cmaps\WP-Symbol.bcmap" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\compressed.tracemonkey-pldi-09.pdf" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\ach\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\af\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\ak\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\an\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\ar\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\ast\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\as\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\az\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\be\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\bg\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\bn-BD\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\bn-IN\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\br\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\bs\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\ca\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\csb\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\cs\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\cy\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\da\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\de\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\el\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\en-GB\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\en-US\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\en-ZA\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\eo\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\es-AR\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\es-CL\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\es-ES\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\es-MX\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\et\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\eu\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\fa\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\ff\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\fi\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\fr\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\fy-NL\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\ga-IE\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\gd\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\gl\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\gu-IN\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\he\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\hi-IN\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\hr\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\hu\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\hy-AM\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\id\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\is\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\it\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\ja\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\ka\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\kk\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\km\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\kn\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\ko\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\ku\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\lg\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\lij\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\locale.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\lt\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\lv\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\mai\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\mk\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\ml\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\mn\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\mr\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\ms\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\my\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\nb-NO\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\nl\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\nn-NO\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\nso\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\oc\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\or\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\pa-IN\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\pl\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\pt-BR\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\pt-PT\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\rm\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\ro\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\ru\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\rw\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\sah\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\si\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\sk\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\sl\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\son\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\sq\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\sr\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\sv-SE\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\sw\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\ta-LK\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\ta\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\te\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\th\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\tl\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\tn\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\tr\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\uk\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\ur\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\vi\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\wo\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\xh\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\zh-CN\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\zh-TW\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\web\locale\zu\viewer.properties" />
+    <Content Include="Scripts\pdfjs-1.6.210-dist\PDFSHOW\pdf.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5014</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5014/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

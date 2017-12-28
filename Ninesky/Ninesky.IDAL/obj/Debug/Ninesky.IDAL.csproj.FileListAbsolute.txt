@@ -1,0 +1,5 @@
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.IDAL\bin\Debug\Ninesky.IDAL.dll
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.IDAL\bin\Debug\Ninesky.IDAL.pdb
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.IDAL\obj\Debug\Ninesky.IDAL.csprojResolveAssemblyReference.cache
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.IDAL\obj\Debug\Ninesky.IDAL.dll
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.IDAL\obj\Debug\Ninesky.IDAL.pdb

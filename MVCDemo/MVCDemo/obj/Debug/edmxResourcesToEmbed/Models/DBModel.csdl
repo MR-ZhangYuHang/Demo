@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MvcDemoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SysRole">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RoleDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SysUserRole" Relationship="Self.FK_dbo_SysUserRole_dbo_SysRole_SysRole_ID" FromRole="SysRole" ToRole="SysUserRole" />
+  </EntityType>
+  <EntityType Name="SysUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SysUserRole" Relationship="Self.FK_dbo_SysUserRole_dbo_SysUser_SysUser_ID" FromRole="SysUser" ToRole="SysUserRole" />
+    <Property Name="istext" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SysUserRole">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SysUserID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SysRoleID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SysRole_ID" Type="Int32" />
+    <Property Name="SysUser_ID" Type="Int32" />
+    <NavigationProperty Name="SysRole" Relationship="Self.FK_dbo_SysUserRole_dbo_SysRole_SysRole_ID" FromRole="SysUserRole" ToRole="SysRole" />
+    <NavigationProperty Name="SysUser" Relationship="Self.FK_dbo_SysUserRole_dbo_SysUser_SysUser_ID" FromRole="SysUserRole" ToRole="SysUser" />
+  </EntityType>
+  <Association Name="FK_dbo_SysUserRole_dbo_SysRole_SysRole_ID">
+    <End Role="SysRole" Type="Self.SysRole" Multiplicity="0..1" />
+    <End Role="SysUserRole" Type="Self.SysUserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysRole">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SysUserRole">
+        <PropertyRef Name="SysRole_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_SysUserRole_dbo_SysUser_SysUser_ID">
+    <End Role="SysUser" Type="Self.SysUser" Multiplicity="0..1" />
+    <End Role="SysUserRole" Type="Self.SysUserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysUser">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SysUserRole">
+        <PropertyRef Name="SysUser_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBModel" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+    <EntitySet Name="SysRole" EntityType="Self.SysRole" />
+    <EntitySet Name="SysUser" EntityType="Self.SysUser" />
+    <EntitySet Name="SysUserRole" EntityType="Self.SysUserRole" />
+    <AssociationSet Name="FK_dbo_SysUserRole_dbo_SysRole_SysRole_ID" Association="Self.FK_dbo_SysUserRole_dbo_SysRole_SysRole_ID">
+      <End Role="SysRole" EntitySet="SysRole" />
+      <End Role="SysUserRole" EntitySet="SysUserRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_SysUserRole_dbo_SysUser_SysUser_ID" Association="Self.FK_dbo_SysUserRole_dbo_SysUser_SysUser_ID">
+      <End Role="SysUser" EntitySet="SysUser" />
+      <End Role="SysUserRole" EntitySet="SysUserRole" />
+    </AssociationSet>
+    <FunctionImport Name="ProcedureName" ReturnType="Collection(MvcDemoModel.ProcedureName_Result)">
+      <Parameter Name="abc" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="ProcedureName_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" />
+    <Property Type="String" Name="Password" Nullable="true" />
+  </ComplexType>
+</Schema>

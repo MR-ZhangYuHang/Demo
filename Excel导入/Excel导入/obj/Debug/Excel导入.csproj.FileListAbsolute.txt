@@ -1,0 +1,11 @@
+d:\documents\visual studio 2013\Projects\Excel导入\Excel导入\bin\Debug\Excel导入.exe.config
+d:\documents\visual studio 2013\Projects\Excel导入\Excel导入\bin\Debug\Excel导入.exe
+d:\documents\visual studio 2013\Projects\Excel导入\Excel导入\bin\Debug\Excel导入.pdb
+d:\documents\visual studio 2013\Projects\Excel导入\Excel导入\obj\Debug\Excel导入.csprojResolveAssemblyReference.cache
+d:\documents\visual studio 2013\Projects\Excel导入\Excel导入\obj\Debug\Excel导入.Form1.resources
+d:\documents\visual studio 2013\Projects\Excel导入\Excel导入\obj\Debug\Excel导入.Properties.Resources.resources
+d:\documents\visual studio 2013\Projects\Excel导入\Excel导入\obj\Debug\Excel导入.csproj.GenerateResource.Cache
+d:\documents\visual studio 2013\Projects\Excel导入\Excel导入\obj\Debug\Excel导入.exe
+d:\documents\visual studio 2013\Projects\Excel导入\Excel导入\obj\Debug\Excel导入.pdb
+d:\documents\visual studio 2013\Projects\Excel导入\Excel导入\obj\Debug\Excel导入.ACCESS.resources
+D:\Documents\Visual Studio 2013\Projects\Excel导入\Excel导入\obj\Debug\Excel导入.SQLServer.resources

@@ -1,0 +1,7 @@
+d:\documents\visual studio 2013\Projects\ProblemAnalysis\BLL\bin\Debug\BLL.dll
+d:\documents\visual studio 2013\Projects\ProblemAnalysis\BLL\bin\Debug\BLL.pdb
+d:\documents\visual studio 2013\Projects\ProblemAnalysis\BLL\bin\Debug\DAL.dll
+d:\documents\visual studio 2013\Projects\ProblemAnalysis\BLL\bin\Debug\DAL.pdb
+d:\documents\visual studio 2013\Projects\ProblemAnalysis\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+d:\documents\visual studio 2013\Projects\ProblemAnalysis\BLL\obj\Debug\BLL.dll
+d:\documents\visual studio 2013\Projects\ProblemAnalysis\BLL\obj\Debug\BLL.pdb

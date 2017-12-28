@@ -1,0 +1,4 @@
+D:\Documents\Visual Studio 2013\Projects\ProblemAnalysis\DAL\bin\Release\DAL.dll
+D:\Documents\Visual Studio 2013\Projects\ProblemAnalysis\DAL\bin\Release\DAL.pdb
+D:\Documents\Visual Studio 2013\Projects\ProblemAnalysis\DAL\obj\Release\DAL.dll
+D:\Documents\Visual Studio 2013\Projects\ProblemAnalysis\DAL\obj\Release\DAL.pdb

@@ -1,0 +1,257 @@
+﻿@{
+    ViewBag.Title = "问题分析汇总";
+}
+<form class="bs-example bs-example-form" data-example-id="input-group-with-button" style="padding-top:100px;">
+    <div class="row">
+        <div class="input-group input-group-lg">
+            <input class="form-control" placeholder="输入关键字..." type="text" aria-describedby="sizing-addon1" id="txtpro">
+            <span class="input-group-btn" style="padding-left:0px;">
+                <button class="btn btn-default" type="button" onclick="Login()">查找!</button>
+            </span>
+            <span class="input-group-btn" style="padding-left:0px;">
+                <button class="btn btn-default" type="button" onclick="showmenu()">编辑!</button>
+            </span>
+        </div>
+    </div>
+
+</form>
+<div style="padding-top: 50px; width: 1200px; text-align: center">
+    <table class="table table-hover" style=" height:540px;">
+        <thead>
+            <tr style="text-align:center;">
+                <th style="width: 40px; height: 53px; text-align: center;"><span style="font-size:16px;">*</span></th>
+                <th style="text-align:center;"><span style="font-size:16px;">标题</span></th>
+                <th style="text-align:center;"><span style="font-size:16px;">问题描述</span></th>
+                <th style="text-align:center;"><span style="font-size:16px;">解决方案</span></th>
+                <th style="text-align:center;"><span style="font-size:16px;">时间</span></th>
+                <th style="text-align:center;" class="menus"><span style="font-size:16px;">编辑</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            @*<tr>
+                    <td>1</td>
+                    <td>$is undefined</td>
+                    <td>提示$没有找到</td>
+                    <td>可能是jQuery没有引用</td>
+                    <td>2017-1-1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>烤串太咸</td>
+                    <td>烧烤的肉太咸</td>
+                    <td>可能肉酱太咸</td>
+                    <td>2017-1-1</td>
+                </tr>*@
+        </tbody>
+
+    </table>
+
+    <div id="example" style="margin:0 auto;">
+
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style=" margin:0 auto;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    提示
+                </h4>
+            </div>
+            <div class="modal-body">
+                在这里添加一些文本
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    关闭
+                </button>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style=" margin: 0 auto; padding-left: 0px;">
+    <div class="modal-dialog">
+        <div class="modal-content" style="height:800px; width:1000px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    提示
+                </h4>
+            </div>
+            <div class="modal-body" id="preview" style="height:680px;">
+                <div >
+                    <span class="txt">标题:</span><span id="title"></span>
+                    <br /><br />
+                    <span class="txt">问题描述:</span><br /><div id="problem"></div>
+                    <br />
+                    <span class="txt">解决方案:</span><br /><div id="solution"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    关闭
+                </button>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<div hidden="hidden">
+    <div id="div1">
+
+    </div>
+</div>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/wangEditor-3.0.0/release/wangEditor.min.js"></script>
+<script src="~/Scripts/bootstrap-paginator-master/src/bootstrap-paginator.js"></script>
+<script src="~/Scripts/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        Login();
+        $(".menus").hide();
+    })
+    var E = window.wangEditor
+    var editor = new E('#div1')
+    //var editor = new wangEditor('div1');
+    editor.create();
+
+    function Login(page) {
+        if (page == undefined) {
+            page = 1;
+        }
+        $.ajax({
+            url: "/Home/GetTable",
+            type: "POST",
+            async: false,
+            data: {
+                title: $("#txtpro").val(),
+                page: page
+            },
+            success: function (data) {
+                result = eval('(' + data + ')');
+                result_Table = result.Table;
+                $("tbody").empty();
+                edittable(result_Table);
+                var pageid = Math.ceil(result.Table1[0].Column1 / 10)
+                var options = {
+                    currentPage: 1,
+                    totalPages: pageid,
+                    size: 'large',
+                    alignment: 'center',
+                    onPageClicked: function (event, originalEvent, type, page) {
+                        // 按分页从后台获取第 + page + 页的具体数据
+                        Login(page);
+                    }
+                }
+                $('#example').bootstrapPaginator(options);
+                sessionStorage.removeItem('Id');
+            }
+        })
+
+
+    }
+    function edittable(table) {
+        var arry_table = [];
+        for (var i = 0; i < table.length; i++) {
+            arry_table.push('<tr style="height:50px;">');
+            arry_table.push('<td >' + Number(i + 1) + '</td>');
+            arry_table.push('<td><a href="#" onclick="Contacts(' + table[i].Id + ')">' + table[i].Title + '</a></td>');
+            arry_table.push('<td>' + HTMLDecode(table[i].Problemdescription) + '</td>');
+            arry_table.push('<td>' + HTMLDecode(table[i].Solution) + '</td>');
+            arry_table.push('<td>' + table[i].datatime + '</td>');
+            arry_table.push('<td class="menus" style="width:200px;"><button class="btn btn-default" type="button" onclick="Edit(' + table[i].Id + ')">修改</button>');
+            arry_table.push('<button class="btn btn-default"  type="button" onclick="Delete(' + table[i].Id + ')">删除</button>');
+            arry_table.push('<button class="btn btn-default"  type="button" onclick="Top(' + table[i].Id + ')">置顶</button></td>');
+            arry_table.push('</tr>');
+        }
+        $("tbody").append(arry_table.join(""));
+    }
+    function HTMLDecode(text) {
+        var temp = document.createElement("div");
+        temp.innerHTML = text;
+        var output = temp.innerText || temp.textContent;
+        temp = null;
+        editor.txt.html(output);
+        var text = editor.txt.text();
+        return text.trim().substring(0, 10) + ".....";
+    }
+    function HTMLDecodes(text) {
+        var temp = document.createElement("div");
+        temp.innerHTML = text;
+        var output = temp.innerText || temp.textContent;
+        temp = null;
+        return output;
+    }
+    function showmenu() {
+        if ($(".menus").is(":hidden")) {
+            $(".menus").fadeIn("slow");
+        }
+        else
+        {
+            $(".menus").fadeOut("slow");
+        }
+    }
+    function Edit(id) {
+        sessionStorage.setItem("Id", id);
+        window.location.href = "/Home/About";
+    }
+    function Delete(id) {
+        $.ajax({
+            url: "/Home/DeleteLine",
+            type: "POST",
+            async: false,
+            data: {
+                id: id
+            },
+            success: function (data) {
+                Login();
+                $('#myModal').modal('show')
+                $(".modal-body").empty().html("<span>" + data + "</span>");
+            }
+        })
+    }
+    function Contacts(id) {
+        //$('#myModal1').modal('show')
+        //$.ajax({
+        //    url: "/Home/GetLine",
+        //    type: "POST",
+        //    data: { id: id },
+        //    success: function (data) {
+        //        result = eval('(' + data + ')');
+        //        result_Table = result.Table;
+        //        $("#title").html(result_Table[0].Title);
+        //        var txt1 = HTMLDecodes(result_Table[0].Problemdescription);
+        //        var txt2 = HTMLDecodes(result_Table[0].Solution);
+        //        $("#problem").append(txt1);
+        //        $("#solution").append(txt2);
+
+
+        //    }
+        //})
+        sessionStorage.setItem("CId", id);
+        window.location.href = "/Home/Contact";
+
+    }
+    function Top(id) {
+        $.ajax({
+            url: "/Home/TopLine",
+            type: "POST",
+            data: { id: id },
+            success: function (data) {
+                Login();
+            }
+        })
+    }
+</script>
+<style>
+
+    .txt {
+        font-size: 20px;
+    }
+</style>

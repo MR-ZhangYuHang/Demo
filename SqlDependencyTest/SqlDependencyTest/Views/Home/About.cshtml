@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+<h4 id="hh"></h4>
+<p>Use this area to provide additional information.</p>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/carhartl-jquery-cookie-92b7715/jquery.cookie.js"></script>
+<script>
+    $(function () {
+        //var myjson =null;
+        $.ajax({
+            type: "POST",
+            url: "/Home/alert",
+            data: { json: myjson },
+            success: function (msg) {
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.status);
+                alert(XMLHttpRequest.readyState);
+                alert(textStatus);
+            }
+        });
+        setCookie("abc", "121212");
+        var timer1 = window.setInterval(function () {
+            var cook = getCookie("sql");
+            $("#hh").text(cook);
+        }, 1000);
+    })
+    function getCookie(name)//取cookies函数        
+    {
+        var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+        if (arr != null) return unescape(arr[2]); return null;
+
+    }
+    function setCookie(name, value) {
+        var Days = 30;
+        var exp = new Date();
+        exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+        document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+    }
+</script>

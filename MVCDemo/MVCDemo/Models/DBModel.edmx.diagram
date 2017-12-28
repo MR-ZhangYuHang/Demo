@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="746da500ca28486d9fdc93ccfe282739" Name="Diagram1">
+        <EntityTypeShape EntityType="MvcDemoModel.C__MigrationHistory" Width="1.5" PointX="6.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcDemoModel.SysRole" Width="3.125" PointX="0.875" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcDemoModel.SysUser" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcDemoModel.SysUserRole" Width="2.375" PointX="5.375" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="MvcDemoModel.FK_dbo_SysUserRole_dbo_SysRole_SysRole_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcDemoModel.FK_dbo_SysUserRole_dbo_SysUser_SysUser_ID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

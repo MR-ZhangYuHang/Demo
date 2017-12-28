@@ -1,0 +1,48 @@
+﻿<Window x:Class="WpfAppPractice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="487.775" Width="609">
+    <Grid ShowGridLines="True" >
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="1" Grid.Column="1" Margin="10">button</Button>
+        <Label MouseUp="SomethingClicked"></Label>
+        <Border Margin="5" Padding="5" Background="LightYellow" BorderBrush="SteelBlue" BorderThickness="3,5,3,5" CornerRadius="3" VerticalAlignment="Top" Grid.Column="0" Grid.Row="0">
+            <StackPanel Margin="3">
+                <Label Margin="3" HorizontalAlignment="Center">a button panel</Label>
+                <Button Margin="3" MaxWidth="200" MinWidth="100" HorizontalAlignment="Left">button a</Button>
+                <Button Margin="3" MaxWidth="200" MinWidth="100" HorizontalAlignment="Right">button b</Button>
+                <Button Margin="3" MaxWidth="200" MinWidth="100">button c</Button>
+                <WrapPanel Margin="3">
+                    <Button Margin="3" MaxWidth="200" MinWidth="100" HorizontalAlignment="Left">button a</Button>
+                    <Button Margin="3" MaxWidth="200" MinWidth="100" HorizontalAlignment="Right">button b</Button>
+                    <Button Margin="3" MaxWidth="200" MinWidth="100">button c</Button>
+                </WrapPanel>
+                <DockPanel LastChildFill="True">
+                    <Button DockPanel.Dock="Top">top2</Button>
+                    <Button DockPanel.Dock="Top" HorizontalAlignment="Left">top3</Button>
+                    <Button DockPanel.Dock="Top" HorizontalAlignment="Right">top</Button>
+                    <Button DockPanel.Dock="Bottom">bottom</Button>
+                    <Button DockPanel.Dock="Left">left</Button>
+                    <Button DockPanel.Dock="Right">right</Button>
+                    <Button >a b c d e f g</Button>
+                </DockPanel>
+            </StackPanel>
+        </Border>
+        <DockPanel LastChildFill="True" Grid.Column="0" Grid.Row="1">
+            <StackPanel DockPanel.Dock="Bottom" Margin="3" HorizontalAlignment="Right" Orientation="Horizontal">
+                <Button Margin="10,10,2,10" Padding="3" Click="OKButton_Click" >ok</Button>
+                <Button Margin="2,10,10,10" Click="OKButton_Click">cancel</Button>
+            </StackPanel>
+            <TextBox DockPanel.Dock="Top" Margin="10">this is text</TextBox>
+        </DockPanel>
+        <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Width="3" VerticalAlignment="Center" HorizontalAlignment="Center" ShowsPreview="False"></GridSplitter>
+    </Grid>
+</Window>

@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ninesky.Web", "Ninesky.Web\Ninesky.Web.csproj", "{E8FDC703-5990-4D47-830F-C65A052294A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ninesky.BLL", "Ninesky.BLL\Ninesky.BLL.csproj", "{3A38ACC8-E73A-4BE7-BD93-7CCDE5295FB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ninesky.Common", "Ninesky.Common\Ninesky.Common.csproj", "{3C3B57F5-556D-4B93-968B-0C08A26F0663}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ninesky.DAL", "Ninesky.DAL\Ninesky.DAL.csproj", "{53CA9178-4076-41E0-820D-A536A09BD783}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ninesky.IBLL", "Ninesky.IBLL\Ninesky.IBLL.csproj", "{D9CAA838-96E6-477A-95DD-129588693209}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ninesky.IDAL", "Ninesky.IDAL\Ninesky.IDAL.csproj", "{75F7B824-6D6B-4E30-9D20-C2D45B003F4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ninesky.Models", "Ninesky.Models\Ninesky.Models.csproj", "{4D1F0388-1A41-4103-B745-A3CCBCD46E61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8FDC703-5990-4D47-830F-C65A052294A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8FDC703-5990-4D47-830F-C65A052294A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8FDC703-5990-4D47-830F-C65A052294A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8FDC703-5990-4D47-830F-C65A052294A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A38ACC8-E73A-4BE7-BD93-7CCDE5295FB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A38ACC8-E73A-4BE7-BD93-7CCDE5295FB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A38ACC8-E73A-4BE7-BD93-7CCDE5295FB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A38ACC8-E73A-4BE7-BD93-7CCDE5295FB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C3B57F5-556D-4B93-968B-0C08A26F0663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C3B57F5-556D-4B93-968B-0C08A26F0663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C3B57F5-556D-4B93-968B-0C08A26F0663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C3B57F5-556D-4B93-968B-0C08A26F0663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53CA9178-4076-41E0-820D-A536A09BD783}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53CA9178-4076-41E0-820D-A536A09BD783}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53CA9178-4076-41E0-820D-A536A09BD783}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53CA9178-4076-41E0-820D-A536A09BD783}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9CAA838-96E6-477A-95DD-129588693209}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9CAA838-96E6-477A-95DD-129588693209}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9CAA838-96E6-477A-95DD-129588693209}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9CAA838-96E6-477A-95DD-129588693209}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75F7B824-6D6B-4E30-9D20-C2D45B003F4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75F7B824-6D6B-4E30-9D20-C2D45B003F4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75F7B824-6D6B-4E30-9D20-C2D45B003F4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75F7B824-6D6B-4E30-9D20-C2D45B003F4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D1F0388-1A41-4103-B745-A3CCBCD46E61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D1F0388-1A41-4103-B745-A3CCBCD46E61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D1F0388-1A41-4103-B745-A3CCBCD46E61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D1F0388-1A41-4103-B745-A3CCBCD46E61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<input id="file" type="file" accept="application/pdf,application/msword" />
+<input type="button" id="btnupload" onclick="UpLoad()" value="上传" />
+<script type="text/javascript">
+
+    function UpLoad() {
+        if ($("#file").val() == "") {
+            alert("请选择文件");
+        }
+        else {
+
+            $.ajax({
+                url: '/UpLoad/UpLoadFile',
+                data: { url: $("#file").val() },
+                type: 'post',
+                dataType: 'json',
+                success: function (data, textStatus) {
+                    alert(data);
+                }
+            })
+        }
+    }
+</script>

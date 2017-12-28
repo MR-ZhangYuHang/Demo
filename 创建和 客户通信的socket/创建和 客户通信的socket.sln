@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "创建和 客户通信的socket", "创建和 客户通信的socket\创建和 客户通信的socket.csproj", "{AD1573E2-9A19-4A9A-BC06-9008C4F7A709}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "客户端发送信息", "客户端发送信息\客户端发送信息.csproj", "{03040A86-4C5C-4B67-85CD-C4976F7672A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "文件流", "文件流\文件流.csproj", "{A9FD5DBA-16F8-4656-8B23-A0E2DA6D6005}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD1573E2-9A19-4A9A-BC06-9008C4F7A709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD1573E2-9A19-4A9A-BC06-9008C4F7A709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD1573E2-9A19-4A9A-BC06-9008C4F7A709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD1573E2-9A19-4A9A-BC06-9008C4F7A709}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03040A86-4C5C-4B67-85CD-C4976F7672A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03040A86-4C5C-4B67-85CD-C4976F7672A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03040A86-4C5C-4B67-85CD-C4976F7672A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03040A86-4C5C-4B67-85CD-C4976F7672A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9FD5DBA-16F8-4656-8B23-A0E2DA6D6005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9FD5DBA-16F8-4656-8B23-A0E2DA6D6005}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9FD5DBA-16F8-4656-8B23-A0E2DA6D6005}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9FD5DBA-16F8-4656-8B23-A0E2DA6D6005}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

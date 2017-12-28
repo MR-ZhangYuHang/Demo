@@ -1,0 +1,5 @@
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.IBLL\bin\Debug\Ninesky.IBLL.dll
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.IBLL\bin\Debug\Ninesky.IBLL.pdb
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.IBLL\obj\Debug\Ninesky.IBLL.csprojResolveAssemblyReference.cache
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.IBLL\obj\Debug\Ninesky.IBLL.dll
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.IBLL\obj\Debug\Ninesky.IBLL.pdb

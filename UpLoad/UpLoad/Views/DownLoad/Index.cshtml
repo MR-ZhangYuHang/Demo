@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<label id="title"></label><br />
+时间:<p id="updowntime"></p> 来源:<p id="source"></p>
+<div id="div" style="height:500px;">
+    <iframe id="ifm" width="100%" height="100%" src="" style="border:0;"></iframe>
+
+</div>
+<div>
+    @Html.ActionLink("预览PDF", "GetPdf", new { id = 3 }, new { target = "_blank" })
+</div>
+<input type="button" id="btndown" value="下载" onclick=" " />
+<input type="button" id="login" value="加载" onclick="Login()"/>
+<form id="upform" enctype="multipart/form-data" method="post">
+    <input type="file" id="upfile" name ="upname"/>
+    <input type="button" value=" 上传" onclick="update()" />
+
+</form>
+<script src="~/Scripts/pdfjs-1.6.210-dist/build/pdf.js"></script>
+<textarea id="text1"></textarea>
+<a href="~/Scripts/pdfjs-1.6.210-dist/web/viewer.html?file=../PDFSHOW/pdf.pdf" onclick="pdfLogin()" target="_blank">查看pdf</a>
+    <script>
+        $(function () {
+            $("#text1").text('111111111/n2222222222/r/n3333333333/r4444444444');
+        })
+        function Login() {
+            var reg = /\n/g;
+            var txt = $("#text1").val();
+            var str = txt.replace(reg, '');
+            var strs = txt.replace('\n','');
+            $.ajax({
+                url: '/DownLoad/Login',
+                type: 'post',
+                dataType: 'json',
+                data: { id: 2 },
+                success: function (data, textStatus) {
+                    $("#title").html(data.name);
+                    $("#updowntime").html(data.updatetime);
+                    $("#source").html(data.source);
+                    $("#btndown").attr("onclick", "window.open('" + data.path + "')");
+                    $("#ifm").attr("src", data.htmlpath);
+                }
+            })
+        }
+        function pdfLogin()
+        {
+            $("#ifm").attr("src", "/Scripts/pdfjs-1.6.210-dist/web/viewer.html?file=../PDFSHOW/pdf.pdf");
+            $("#text1").val('111111111\n2222222222\r\n3333333333\r4444444444');
+        }
+        function update() {
+            var ss = $("#upform").html();
+            var formData = new FormData($("#upform")[0]);
+            $.ajax({
+                url: "/Home/update",
+                async: false,
+                type: "POST",
+                data: formData,
+                cache: false,
+                processData: false,
+                contentType: false,
+                success: function (data) {
+                    if (data == "success") {
+                        alert("上传成功");
+                    }
+                    else if (data == "error") {
+                        alert("上传失败");
+                    }
+                },
+                error: function () {
+                    alert("上传失败");
+                }
+            });
+        }
+    </script>

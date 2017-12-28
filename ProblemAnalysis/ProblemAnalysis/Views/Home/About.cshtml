@@ -1,0 +1,162 @@
+﻿@{
+    ViewBag.Title = "问题分析汇总";
+}
+<div style="padding-top:100px">
+    <span class="words">标题：</span>
+    <input type="text" class="form-control" id="title" style="height:40px;" />
+    <div style="padding-top:20px;">
+        <span class="words">问题描述：</span>
+        <div id="div1" style="height:200px;" >
+        </div>
+    </div>
+    <div style="padding-top:50px;">
+        <span class=" words">
+            解决方案：
+        </span>
+        <div id="div2" >
+        </div>
+    </div>
+    <div style="text-align:center; padding-top:20px;">
+        <input class="btn btn-default" type="button" value="提交" style="width:150px;" id="sumbtn" onclick="Submit()">
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style=" margin:0 auto;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    提示
+                </h4>
+            </div>
+            <div class="modal-body">
+                在这里添加一些文本
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    关闭
+                </button>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/wangEditor-3.0.0/release/wangEditor.min.js"></script>
+<script src="~/Scripts/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+@*这里引用jquery和wangEditor.js*@
+<script type="text/javascript">
+    var id = sessionStorage.getItem("Id");
+    $(function () {
+        if (id != null) {
+            $.ajax({
+                url: "/Home/GetLine",
+                type: "POST",
+                data: { id: id },
+                success: function (data) {
+                    result = eval('(' + data + ')');
+                    result_Table = result.Table;
+                    $("#title").val(result_Table[0].Title);
+                    var txt1 = HTMLDecode(result_Table[0].Problemdescription);
+                    var txt2 = HTMLDecode(result_Table[0].Solution);
+                    editor1.txt.html(txt1);
+                    editor2.txt.html(txt2);
+
+                }
+            })
+        }
+
+    })
+    var E = window.wangEditor
+    var editor1 = new E('#div1')
+    var editor2 = new E('#div2')
+    editor1.customConfig.uploadImgShowBase64 = true
+    editor2.customConfig.uploadImgShowBase64 = true
+    editor1.create()
+    editor2.create()
+    //var editor1 = new wangEditor('div1');
+    //var editor2 = new wangEditor('div2');
+    //editor1.config.uploadImgUrl = '/upload';
+    //editor2.config.uploadImgUrl = '/upload';
+    //editor1.config.uploadImgFns.onload = function (resultText, xhr) {
+    //    // resultText 服务器端返回的text
+    //    // xhr 是 xmlHttpRequest 对象，IE8、9中不支持
+
+    //    // 上传图片时，已经将图片的名字存在 editor.uploadImgOriginalName
+    //    var originalName = editor.uploadImgOriginalName || '';
+    //    alert(resultText);
+    //    // 如果 resultText 是图片的url地址，可以这样插入图片：
+    //    editor.command(null, 'insertHtml', '<img src="' + resultText + '" alt="' + originalName + '" style="max-width:100%;"/>');
+    //    // 如果不想要 img 的 max-width 样式，也可以这样插入：
+    //    // editor.command(null, 'InsertImage', resultText);
+    //};
+    //editor1.create();
+    //editor2.create();
+
+    // 避免上面编辑器的 dropPanel 被下面的编辑器遮挡，保证下面的编辑器的 z-index 要小于上面的编辑器
+    function Submit() {
+        var title = $("#title").val();
+        var edit1 = editor1.txt.html();
+        var edit2 = editor2.txt.html();
+        var text1 = editor1.txt.text();
+        var text2 = editor2.txt.text();
+        if (title.length == 0) {
+            $('#myModal').modal('show')
+            $(".modal-body").empty().html("<span>请填写标题</span>");
+            return false;
+        }
+        if (text1.trim() == "") {
+            $('#myModal').modal('show')
+            $(".modal-body").empty().html("<span>请填写问题描述</span>");
+            return false;
+        }
+        if (text2.trim() == "") {
+            $('#myModal').modal('show')
+            $(".modal-body").empty().html("<span>请填写解决方案</span>");
+            return false;
+        }
+        if (id == null) {
+            id = 0;
+        }
+        $.ajax({
+            url: "/Home/SumitProblem",
+            type: "POST",
+            data: {
+                id: id,
+                title: title,
+                edit1: HTMLEncode(edit1),
+                edit2: HTMLEncode(edit2)
+            },
+            success: function (data) {
+                $("#title").val('');
+                editor1.txt.html('<p><br></p>');
+                editor2.txt.html('<p><br></p>');
+                $('#myModal').modal('show')
+                $(".modal-body").empty().html("<span>" + data + "</span>");
+                sessionStorage.removeItem('Id');
+            }
+        });
+    }
+    function HTMLEncode(html) {
+        var temp = document.createElement("div");
+        (temp.textContent != null) ? (temp.textContent = html) : (temp.innerText = html);
+        var output = temp.innerHTML;
+        temp = null;
+        return output;
+    }
+    function HTMLDecode(text) {
+        var temp = document.createElement("div");
+        temp.innerHTML = text;
+        var output = temp.innerText || temp.textContent;
+        temp = null;
+        return output;
+    }
+</script>
+<style>
+    .words {
+        font-size: 17px;
+    }
+</style>
+

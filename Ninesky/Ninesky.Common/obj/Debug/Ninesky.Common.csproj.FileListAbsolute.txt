@@ -1,0 +1,5 @@
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.Common\bin\Debug\Ninesky.Common.dll
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.Common\bin\Debug\Ninesky.Common.pdb
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.Common\obj\Debug\Ninesky.Common.csprojResolveAssemblyReference.cache
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.Common\obj\Debug\Ninesky.Common.dll
+d:\documents\visual studio 2013\Projects\Ninesky\Ninesky.Common\obj\Debug\Ninesky.Common.pdb
