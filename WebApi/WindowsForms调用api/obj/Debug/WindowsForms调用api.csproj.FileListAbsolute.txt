@@ -32,14 +32,9 @@ d:\documents\visual studio 2013\Projects\WebApi\WindowsForms调用api\bin\Debug\
 d:\documents\visual studio 2013\Projects\WebApi\WindowsForms调用api\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll
 d:\documents\visual studio 2013\Projects\WebApi\WindowsForms调用api\bin\Debug\zh-Hans\System.Web.Http.resources.dll
 d:\documents\visual studio 2013\Projects\WebApi\WindowsForms调用api\bin\Debug\zh-Hans\System.Web.Optimization.resources.dll
+d:\documents\visual studio 2013\Projects\WebApi\WindowsForms调用api\bin\Debug\zh-Hans\System.Net.Http.Formatting.resources.dll
 d:\documents\visual studio 2013\Projects\WebApi\WindowsForms调用api\bin\Debug\zh-Hans\System.Web.Http.WebHost.resources.dll
 d:\documents\visual studio 2013\Projects\WebApi\WindowsForms调用api\bin\Debug\zh-Hans\System.Web.Razor.resources.dll
 d:\documents\visual studio 2013\Projects\WebApi\WindowsForms调用api\bin\Debug\zh-Hans\System.Web.WebPages.Razor.resources.dll
 d:\documents\visual studio 2013\Projects\WebApi\WindowsForms调用api\bin\Debug\zh-Hans\System.Web.WebPages.resources.dll
 d:\documents\visual studio 2013\Projects\WebApi\WindowsForms调用api\bin\Debug\zh-Hans\System.Web.WebPages.Deployment.resources.dll
-D:\Documents\Visual Studio 2013\Projects\WebApi\WindowsForms调用api\bin\Debug\System.Web.Http.Cors.dll
-D:\Documents\Visual Studio 2013\Projects\WebApi\WindowsForms调用api\bin\Debug\WebGrease.dll
-D:\Documents\Visual Studio 2013\Projects\WebApi\WindowsForms调用api\bin\Debug\System.Web.Cors.dll
-D:\Documents\Visual Studio 2013\Projects\WebApi\WindowsForms调用api\bin\Debug\Antlr3.Runtime.dll
-D:\Documents\Visual Studio 2013\Projects\WebApi\WindowsForms调用api\bin\Debug\System.Web.Http.Cors.xml
-D:\Documents\Visual Studio 2013\Projects\WebApi\WindowsForms调用api\bin\Debug\Antlr3.Runtime.pdb

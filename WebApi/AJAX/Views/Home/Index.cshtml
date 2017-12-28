@@ -59,11 +59,14 @@
             Province: "beijing",
             City: "shanghai"
         }
-        var arr=["1","2","3","4"]
         $.ajax({
             type: "POST",
             url: "http://localhost:31500/api/products/product/update",
-            data:JSON.stringify(arr),
+            data: {
+                IPAddress: "192.168.1.39",
+                Province: "beijing",
+                City: "shanghai"
+            },
             //contentType:"application/json",
             //dataType: "jsonp",
             success: function (data) {

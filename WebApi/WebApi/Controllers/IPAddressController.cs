@@ -7,13 +7,11 @@ using System.Net.Http;
 using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Web.Http;
-using System.Web.Http.Cors;
 using WebApi.Models;
 
 namespace WebApi.Controllers
 {
     [RoutePrefix("api/products")]
-    [EnableCors(origins: "http://localhost:1896", headers: "*", methods: "*")]
     public class IPAddressController : ApiController
     {
         private const string CallbackQueryParameter = "callback";
@@ -41,7 +39,7 @@ namespace WebApi.Controllers
             //return Json(addresses);
         }
         [HttpPost, Route("product/update")]
-        public string GetIPAddressByIP(string[] address)
+        public string GetIPAddressByIP([FromBody]Address address)
         {
             //Address addresses = new Address() { IPAddress = "1.91.38.31", Province = "北京市", City = "北京市" };
             DataContractJsonSerializer js = new DataContractJsonSerializer(typeof(Address));
