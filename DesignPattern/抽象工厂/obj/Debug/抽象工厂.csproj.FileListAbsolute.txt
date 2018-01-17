@@ -1,0 +1,6 @@
+D:\Documents\Visual Studio 2013\Projects\Demo\DesignPattern\抽象工厂\bin\Debug\抽象工厂.exe.config
+D:\Documents\Visual Studio 2013\Projects\Demo\DesignPattern\抽象工厂\obj\Debug\抽象工厂.csprojResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2013\Projects\Demo\DesignPattern\抽象工厂\bin\Debug\抽象工厂.exe
+D:\Documents\Visual Studio 2013\Projects\Demo\DesignPattern\抽象工厂\bin\Debug\抽象工厂.pdb
+D:\Documents\Visual Studio 2013\Projects\Demo\DesignPattern\抽象工厂\obj\Debug\抽象工厂.exe
+D:\Documents\Visual Studio 2013\Projects\Demo\DesignPattern\抽象工厂\obj\Debug\抽象工厂.pdb

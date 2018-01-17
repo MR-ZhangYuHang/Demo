@@ -1,0 +1,6 @@
+D:\Documents\Visual Studio 2013\Projects\Demo\DesignPattern\享元模式\bin\Debug\享元模式.exe.config
+D:\Documents\Visual Studio 2013\Projects\Demo\DesignPattern\享元模式\bin\Debug\享元模式.exe
+D:\Documents\Visual Studio 2013\Projects\Demo\DesignPattern\享元模式\bin\Debug\享元模式.pdb
+D:\Documents\Visual Studio 2013\Projects\Demo\DesignPattern\享元模式\obj\Debug\享元模式.exe
+D:\Documents\Visual Studio 2013\Projects\Demo\DesignPattern\享元模式\obj\Debug\享元模式.pdb
+D:\Documents\Visual Studio 2013\Projects\Demo\DesignPattern\享元模式\obj\Debug\享元模式.csprojResolveAssemblyReference.cache

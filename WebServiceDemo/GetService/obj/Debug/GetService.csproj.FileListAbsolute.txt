@@ -1,0 +1,6 @@
+D:\Documents\Visual Studio 2013\Projects\Demo\WebServiceDemo\GetService\bin\Debug\GetService.exe.config
+D:\Documents\Visual Studio 2013\Projects\Demo\WebServiceDemo\GetService\bin\Debug\GetService.exe
+D:\Documents\Visual Studio 2013\Projects\Demo\WebServiceDemo\GetService\bin\Debug\GetService.pdb
+D:\Documents\Visual Studio 2013\Projects\Demo\WebServiceDemo\GetService\obj\Debug\GetService.csprojResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2013\Projects\Demo\WebServiceDemo\GetService\obj\Debug\GetService.exe
+D:\Documents\Visual Studio 2013\Projects\Demo\WebServiceDemo\GetService\obj\Debug\GetService.pdb
