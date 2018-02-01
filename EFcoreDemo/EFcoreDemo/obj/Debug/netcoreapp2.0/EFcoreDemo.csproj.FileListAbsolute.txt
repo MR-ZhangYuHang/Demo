@@ -1,0 +1,24 @@
+C:\Users\qq525\source\repos\EFcoreDemo\EFcoreDemo\bin\Debug\netcoreapp2.0\EFcoreDemo.deps.json
+C:\Users\qq525\source\repos\EFcoreDemo\EFcoreDemo\bin\Debug\netcoreapp2.0\EFcoreDemo.runtimeconfig.json
+C:\Users\qq525\source\repos\EFcoreDemo\EFcoreDemo\bin\Debug\netcoreapp2.0\EFcoreDemo.runtimeconfig.dev.json
+C:\Users\qq525\source\repos\EFcoreDemo\EFcoreDemo\bin\Debug\netcoreapp2.0\EFcoreDemo.dll
+C:\Users\qq525\source\repos\EFcoreDemo\EFcoreDemo\obj\Debug\netcoreapp2.0\EFcoreDemo.csprojResolveAssemblyReference.cache
+C:\Users\qq525\source\repos\EFcoreDemo\EFcoreDemo\obj\Debug\netcoreapp2.0\EFcoreDemo.csproj.CoreCompileInputs.cache
+C:\Users\qq525\source\repos\EFcoreDemo\EFcoreDemo\obj\Debug\netcoreapp2.0\EFcoreDemo.AssemblyInfoInputs.cache
+C:\Users\qq525\source\repos\EFcoreDemo\EFcoreDemo\obj\Debug\netcoreapp2.0\EFcoreDemo.AssemblyInfo.cs
+C:\Users\qq525\source\repos\EFcoreDemo\EFcoreDemo\bin\Debug\netcoreapp2.0\EFcoreDemo.pdb
+C:\Users\qq525\source\repos\EFcoreDemo\EFcoreDemo\obj\Debug\netcoreapp2.0\EFcoreDemo.dll
+C:\Users\qq525\source\repos\EFcoreDemo\EFcoreDemo\obj\Debug\netcoreapp2.0\EFcoreDemo.pdb
+C:\Program Files\feiq\AutoRecv Files\qq525\2018-01-31 13_21_42\EFcoreDemo\EFcoreDemo\bin\Debug\netcoreapp2.0\EFcoreDemo.deps.json
+C:\Program Files\feiq\AutoRecv Files\qq525\2018-01-31 13_21_42\EFcoreDemo\EFcoreDemo\bin\Debug\netcoreapp2.0\EFcoreDemo.runtimeconfig.json
+C:\Program Files\feiq\AutoRecv Files\qq525\2018-01-31 13_21_42\EFcoreDemo\EFcoreDemo\bin\Debug\netcoreapp2.0\EFcoreDemo.runtimeconfig.dev.json
+C:\Program Files\feiq\AutoRecv Files\qq525\2018-01-31 13_21_42\EFcoreDemo\EFcoreDemo\bin\Debug\netcoreapp2.0\EFcoreDemo.dll
+C:\Program Files\feiq\AutoRecv Files\qq525\2018-01-31 13_21_42\EFcoreDemo\EFcoreDemo\bin\Debug\netcoreapp2.0\EFcoreDemo.pdb
+C:\Program Files\feiq\AutoRecv Files\qq525\2018-01-31 13_21_42\EFcoreDemo\EFcoreDemo\obj\Debug\netcoreapp2.0\EFcoreDemo.csproj.CoreCompileInputs.cache
+C:\Program Files\feiq\AutoRecv Files\qq525\2018-01-31 13_21_42\EFcoreDemo\EFcoreDemo\obj\Debug\netcoreapp2.0\EFcoreDemo.AssemblyInfoInputs.cache
+C:\Program Files\feiq\AutoRecv Files\qq525\2018-01-31 13_21_42\EFcoreDemo\EFcoreDemo\obj\Debug\netcoreapp2.0\EFcoreDemo.AssemblyInfo.cs
+C:\Program Files\feiq\AutoRecv Files\qq525\2018-01-31 13_21_42\EFcoreDemo\EFcoreDemo\obj\Debug\netcoreapp2.0\EFcoreDemo.dll
+C:\Program Files\feiq\AutoRecv Files\qq525\2018-01-31 13_21_42\EFcoreDemo\EFcoreDemo\obj\Debug\netcoreapp2.0\EFcoreDemo.pdb
+C:\Program Files\feiq\AutoRecv Files\qq525\2018-01-31 13_21_42\EFcoreDemo\EFcoreDemo\bin\Debug\netcoreapp2.0\ServiceStack.dll
+C:\Program Files\feiq\AutoRecv Files\qq525\2018-01-31 13_21_42\EFcoreDemo\EFcoreDemo\bin\Debug\netcoreapp2.0\ServiceStack.Interfaces.dll
+C:\Program Files\feiq\AutoRecv Files\qq525\2018-01-31 13_21_42\EFcoreDemo\EFcoreDemo\bin\Debug\netcoreapp2.0\ServiceStack.ServiceInterface.dll

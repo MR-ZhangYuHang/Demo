@@ -17,5 +17,11 @@ namespace WebApi.Models
         [DataMember]
 
         public string City { get; set; }
+        [DataMember]
+        public List<Phone> Phone;
     }  
+    public class Phone{
+        public string phone { get; set; }
+        public string tel { get; set; }
+}
 }
