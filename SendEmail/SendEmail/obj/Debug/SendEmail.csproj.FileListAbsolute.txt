@@ -1,0 +1,9 @@
+C:\Users\Administrator\Desktop\izhaofu-SendEmail-master\SendEmail\SendEmail\bin\Debug\SendEmail.exe.config
+C:\Users\Administrator\Desktop\izhaofu-SendEmail-master\SendEmail\SendEmail\bin\Debug\SendEmail.exe
+C:\Users\Administrator\Desktop\izhaofu-SendEmail-master\SendEmail\SendEmail\bin\Debug\SendEmail.pdb
+C:\Users\Administrator\Desktop\izhaofu-SendEmail-master\SendEmail\SendEmail\obj\Debug\SendEmail.Form1.resources
+C:\Users\Administrator\Desktop\izhaofu-SendEmail-master\SendEmail\SendEmail\obj\Debug\SendEmail.Properties.Resources.resources
+C:\Users\Administrator\Desktop\izhaofu-SendEmail-master\SendEmail\SendEmail\obj\Debug\SendEmail.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\izhaofu-SendEmail-master\SendEmail\SendEmail\obj\Debug\SendEmail.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\izhaofu-SendEmail-master\SendEmail\SendEmail\obj\Debug\SendEmail.exe
+C:\Users\Administrator\Desktop\izhaofu-SendEmail-master\SendEmail\SendEmail\obj\Debug\SendEmail.pdb
